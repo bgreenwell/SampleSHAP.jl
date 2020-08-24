@@ -19,6 +19,6 @@ bst = xgboost(X, 200, label = y, eta = 1, max_depth = 6)
 shap = SampleSHAP.explain(bst, X, 1000)
 p1 = scatter(X[:, 8], shap[:, 8])
 p2 = scatter(X[:, 15], shap[:, 15])
-p3 = plot(p1, p2, layout = (1, 2), legend = false)
+plot(p1, p2, layout = (1, 2), legend = false, size = (800, 400))
 ```
 ![](plot.png)
