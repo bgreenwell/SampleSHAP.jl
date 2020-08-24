@@ -1,6 +1,6 @@
 # SampleSHAP.jl
 
-Seems to work quite a bit faster than R's [fastshap](https://github.com/bgreenwell/fastshap) package, but it's mostly a playground for me to start learning Julia.
+In an effort to learn Julia, I'm creating a lightweight port of my [fastshap](https://github.com/bgreenwell/fastshap) package for R. It currently only works with [XGBoost.jl](https://github.com/dmlc/XGBoost.jl) models, but the initial results seem promising.
 
 ```julia
 using CSV, DataFrames, Plots, SampleSHAP, XGBoost
