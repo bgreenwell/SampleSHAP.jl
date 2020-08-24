@@ -17,6 +17,8 @@ bst = xgboost(X, 200, label = y, eta = 1, max_depth = 6)
 # room for improvement (takes about 2--3 seconds per feature on my machine for
 # this example)
 shap = SampleSHAP.explain(bst, X, 1000)
-scatter(X[:, 8], shap[:, 8])
-scatter(X[:, 15], shap[:, 15])
+p1 = scatter(X[:, 8], shap[:, 8])
+p2 = scatter(X[:, 15], shap[:, 15])
+p3 = plot(p1, p2, layout = (1, 2), legend = false)
 ```
+![](plot.png)
