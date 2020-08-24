@@ -1,0 +1,4 @@
+name = "SampleSHAP"
+uuid = "511b94d3-3fcf-4b13-908d-ddfaf97afe61"
+authors = ["bgreenwell <greenwell.brandon@gmail.com>"]
+version = "0.1.0"
