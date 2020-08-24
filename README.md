@@ -13,7 +13,9 @@ y = convert(Vector, boston.cmedv)
 
 bst = xgboost(X, 200, label = y, eta = 1, max_depth = 6)
 
-# About four times faster than fastshap::explain() in R
+# About four times faster than fastshap::explain() in R, with probably lots of
+# room for improvement (takes about 2--3 seconds per feature on my machine for
+# this example)
 shap = SampleSHAP.explain(bst, X, 1000)
 scatter(X[:, 8], shap[:, 8])
 scatter(X[:, 15], shap[:, 15])
