@@ -1,4 +1,4 @@
-using CSV, DataFrames, Plots, StatsBase, XGBoost
+using StatsBase, XGBoost
 
 function genOMat(X::Matrix)
 
@@ -79,17 +79,3 @@ function explain(fit::Booster, X::Matrix, nsim::Int64=1)
   end
   res2
 end
-
-
-# boston = CSV.read("/Users/bgreenwell/Desktop/trees/data/boston.csv", DataFrame)
-# X = boston[:, setdiff(names(boston), ["cmedv"])]
-# xnames = names(X)
-# X = convert(Matrix, X)
-# y = convert(Vector, boston.cmedv)
-#
-# bst = xgboost(X, 200, label = y, eta = 1, max_depth = 6)
-#
-# About four times faster than fastshap::explain() in R
-# shap = explain(bst, X, 1000)
-# scatter(X[:, 8], shap[:, 8])
-# scatter(X[:, 15], shap[:, 15])
