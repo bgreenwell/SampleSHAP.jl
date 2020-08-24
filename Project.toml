@@ -1,4 +1,9 @@
 name = "SampleSHAP"
 uuid = "511b94d3-3fcf-4b13-908d-ddfaf97afe61"
-authors = ["bgreenwell <greenwell.brandon@gmail.com>"]
+authors = ["Brandon Greenwell <greenwell.brandon@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+StatsBase = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
+XGBoost = "009559a3-9522-5dbb-924b-0b6ed2b22bb9"
